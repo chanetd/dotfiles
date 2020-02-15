@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+        email=dominique.chanet@klarrio.com
+        name=Dominique Chanet
+[push]
+	default = simple
+
+[url "git@github.com:"]
+	insteadOf = https://github.com
+[url "git@gitlab.com:"]
+	insteadof = https://gitlab.com
+[url "git@bitbucket.org:"]
+	insteadof = https://bitbucket.org
+        insteadof = https://api.bitbucket.org
