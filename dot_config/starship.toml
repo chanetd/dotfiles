@@ -1,0 +1,27 @@
+add_newline = false
+
+prompt_order=["username","directory","git_branch","git_state","git_status","python","jobs","line_break","time","character"]
+
+[directory]
+style="fg:#458588 bold"
+
+[git_branch]
+style="fg:#fabd2f"
+prefix=""
+
+[git_status]
+style="fg:#fe8019"
+
+[python]
+symbol=""
+style="fg:#8ec07c"
+pyenv_version_name=true
+pyenv_prefix=""
+
+[jobs]
+style="fg:#83a598"
+
+[time]
+disabled=false
+format="%H:%M"
+style="fg:#bdae93"
