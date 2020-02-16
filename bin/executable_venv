@@ -1,0 +1,25 @@
+#!/bin/bash
+
+list_venvs() {
+    echo "Known virtual envs:"
+    find "$HOME/.virtualenv" -name activate | grep 'bin/activate$' | sed 's#/bin/activate$##' | sed 's#.*/##'
+}
+
+virtualenv="$1"
+activator="$HOME/.virtualenv/$virtualenv/bin/activate"
+
+if [ ! -f "$activator" ] ; then
+    echo "Not a known virtual env: '$virtualenv'"
+    list_venvs
+    exit 1
+fi
+
+# create a temporary custom RC file and launch bash with it - I hate sourcing scripts :)
+tmp=$(mktemp)
+trap "rm $tmp" EXIT
+cat >> $tmp <<EOF
+source $HOME/.bashrc
+source $activator
+EOF
+
+bash --rcfile $tmp

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# this is a stub pyenv that only serves as a version reporter for starship.rs
+# the default behavior of starship is to always put the python version in the
+# prompt, which we don't care about, but if you disable that you're also not
+# seeing the virtualenv any more.
+# By hijacking the pyenv support in starship, we can make it do our bidding.
+
+if [ -n "$VIRTUAL_ENV" ] ; then
+    echo "($(basename "$VIRTUAL_ENV"))"
+else
+    echo "(system)"
+fi
