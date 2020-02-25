@@ -55,6 +55,9 @@ node_canonical_type() {
         pu*)
             echo public-slave
             ;;
+        k*)
+            echo kafka-slave
+            ;;
         *)
             echo $typ
             ;;
@@ -69,6 +72,9 @@ node_kermit_type() {
             ;;
         "public-slave")
             echo public_slave
+            ;;
+        "kafka-slave")
+            echo kafka_slave
             ;;
         *)
             echo "$node_canonical"
