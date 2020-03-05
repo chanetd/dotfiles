@@ -7,7 +7,7 @@ export TERMINAL=/usr/bin/alacritty
 export GITHUB_TOKEN={{ trim (index (lastpass "dominique.chanet@gmail.com/github personal access token") 0).note.token }}
 export GITLAB_TOKEN={{ trim (index (lastpass "dominique.chanet@gmail.com/gitlab personal access token") 0).note.token }}
 export DSHTEST_APIKEY={{ trim (index (lastpass "dshtest-apikey") 0).note.dev }}
-export GOPRIVATE=github.com/Klarrio
+export GOPRIVATE=github.com/Klarrio,gitlab.com/Klarrio
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
