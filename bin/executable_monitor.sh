@@ -3,7 +3,8 @@ settings='single
 docking
 dockingfull
 bigscreen
-home'
+home
+dockinghome'
 
 setting=${1:-single}
 
@@ -44,6 +45,9 @@ case "$setting" in
         ;;
     home)
         xrandr --output $primary --auto --primary --output $ext1 --mode 2560x1440 --auto --right-of $primary --output $ext2 --off --output $ext3 --off
+        ;;
+    dockinghome)
+        xrandr --output $primary --auto --primary --output $ext1 --off --output $ext2 --off --output $ext3 --mode 2560x1440 --auto --right-of $primary
         ;;
     *)
         echo -e "unknown display mode $setting; known modes are\n$settings" >&2 
