@@ -59,10 +59,6 @@ Plug 'qualiabyte/vim-colorstepper'
 Plug 'jremmen/vim-ripgrep'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-"Plug 'autozimu/LanguageClient-neovim', {
-   "\ 'branch': 'next',
-   "\ 'do': 'bash install.sh'
-   "\ }
 
 call plug#end()
 

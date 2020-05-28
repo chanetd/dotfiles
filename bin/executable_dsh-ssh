@@ -58,5 +58,7 @@ if [ -z $ADDRESS ] ; then
     ADDRESS=$(node_address $PLATFORM $ITYPE $ID)
 fi
 
+# the CentOS on the nodes doesn't like exotic TERM values like 'alacritty'
+export TERM=xterm
 exec ssh `node_ssh_args $PLATFORM $ADDRESS` $*
 
